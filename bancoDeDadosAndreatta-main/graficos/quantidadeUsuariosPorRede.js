@@ -1,18 +1,16 @@
-
 import { getCSS, tickconfig} from "./common.js"
 async function quantidadeUsuariosPorRede() {
-const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json';
+  const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json';
 const res = await fetch (url)
 const dados = await res.json()
 const nomeDasRedes = Object.keys(dados);
-
 const data = [
     {
         x: nomeDasRedes,
         y: quantidadeDeUsuarios,
-        type: 'bar'
+        type: 'bar',
         marker: { 
-            color: getcss('--primary-color')￼
+            color: getcss('--primary-color')
 
     }
         
@@ -34,7 +32,7 @@ const data = [
   xaxis: {
     tickfont: tickconfig,
     title: {
-        text: 'Nome das redes'
+        text: 'Nome das redes',
         font: {
             color: getCSS('--secondary-color')
         }
